@@ -68,11 +68,11 @@ OCR/
 
 # Descripción de archivos principales
 
-utils.py contiene el inicio de la mejora que queremos hacer.
+1. utils.py contiene el inicio de la mejora que queremos hacer.
 
-ocr_pipeline.py: ejecuta el flujo completo del sistema OCR.
+2. ocr_pipeline.py: ejecuta el flujo completo del sistema OCR.
 
-inferencia.py: script principal que permite ejecutar el sistema y generar resultados (texto y la probabilidad)
+3. inferencia.py: script principal que permite ejecutar el sistema y generar resultados (texto y la probabilidad)
 
 # 5. Instrucciones de uso del script de inferencia
 
