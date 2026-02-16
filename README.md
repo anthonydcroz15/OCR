@@ -66,9 +66,9 @@ OCR/
 ├── .gitignore
 └── README.md
 
-Descripción de archivos principales
+# Descripción de archivos principales
 
-utils.py: contiene el inicio de la mejora que queremos hacer.
+utils.py contiene el inicio de la mejora que queremos hacer.
 
 ocr_pipeline.py: ejecuta el flujo completo del sistema OCR.
 
@@ -96,7 +96,7 @@ El sistema imprimirá el texto detectado en consola y generará un archivo con e
 results/output.txt
 
 # 6. Ejemplo de entrada y salida
-Ejemplo de entrada
+# Ejemplo de entrada
 
 Archivo:
 
@@ -108,7 +108,7 @@ Contenido visual aproximado de la imagen:
 Hola mundo
 Este es un ejemplo OCR
 
-Ejemplo de salida (results/output.txt)
+# Ejemplo de salida (results/output.txt)
 Hola mundo
 Este es un ejemplo OCR
 
@@ -116,32 +116,28 @@ Este es un ejemplo OCR
 El texto también se muestra en la terminal tras ejecutar el script.
 
 # 7. Limitaciones y posibles mejoras
-Limitaciones actuales
+# Limitaciones actuales
 
-El modelo funciona correctamente con texto digital impreso.
+1. El modelo funciona correctamente con texto digital impreso.
 
-No está optimizado para reconocimiento de texto manuscrito (a mano alzada).
+2. No está optimizado para reconocimiento de texto manuscrito (a mano alzada).
 
-El rendimiento depende de la calidad y resolución de la imagen.
+3. El rendimiento depende de la calidad y resolución de la imagen.
 
-No se implementan métricas automáticas de evaluación de precisión.
+4. No se implementan métricas automáticas de evaluación de precisión.
 
-Puede disminuir la exactitud en imágenes con ruido, baja iluminación o distorsión.
+5. Puede disminuir la exactitud en imágenes con ruido, baja iluminación o distorsión.
 
-Posibles mejoras
+# Posibles mejoras
 
-Implementar modelos especializados en reconocimiento de escritura manuscrita.
+1. Implementar modelos especializados en reconocimiento de escritura manuscrita.
 
-Incorporar métricas como CER (Character Error Rate).
+2. Incorporar métricas como CER (Character Error Rate).
 
-Integrar corrección ortográfica automática.
+3. Integrar corrección ortográfica automática.
 
-Implementar procesamiento por lotes.
+4. Implementar procesamiento por lotes.
 
-Incorporar aceleración por GPU.
+5. Incorporar aceleración por GPU.
 
-Desarrollar una interfaz gráfica o versión web.
-
-Autores
-
-Proyecto desarrollado con fines académicos.
+6. Desarrollar una interfaz gráfica o versión web.
