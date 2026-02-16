@@ -1,5 +1,7 @@
 import cv2
 
+
+# Mejoras a futuro
 def preprocess_image(image_path):
     """
     Preprocesamiento de imagen:
