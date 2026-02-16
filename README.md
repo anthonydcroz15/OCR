@@ -76,22 +76,22 @@ inferencia.py: script principal que permite ejecutar el sistema y generar result
 
 # 5. Instrucciones de uso del script de inferencia
 
-Colocar una imagen con texto dentro de la carpeta:
+1. Colocar una imagen con texto dentro de la carpeta:
 
 images/
 
 
-Verificar o modificar en src/inferencia.py la ruta de la imagen:
+2. Verificar o modificar en src/inferencia.py la ruta de la imagen:
 
 image_path = "images/test_image.png"
 
 
-Ejecutar el script desde la raíz del proyecto:
+3. Ejecutar el script desde la raíz del proyecto:
 
 python src/inferencia.py
 
 
-El sistema imprimirá el texto detectado en consola y generará un archivo con el resultado en:
+4. El sistema imprimirá el texto detectado en consola y generará un archivo con el resultado en:
 
 results/output.txt
 
