@@ -32,6 +32,7 @@ El modelo está diseñado para funcionar con texto digital impreso o generado po
 2. numpy
 
 # 3.Instrucciones de instalación
+
 1. Clonar el repositorio
 git clone <URL_DEL_REPOSITORIO>
 cd OCR
@@ -54,25 +55,43 @@ source .venv/bin/activate
 pip install easyocr -python numpy
 
 # 4. Descripción de la estructura del repositorio
+```text
 OCR/
 │
-├── images/              # Imágenes de entrada para OCR
-├── results/             # Resultados generados por el sistema
-├── src/
-│   ├── utils.py         # Funciones auxiliares
-│   ├── ocr_pipeline.py  # Implementación del pipeline OCR
-│   └── inferencia.py    # Script principal de ejecución
+├── .venv/               # Entorno virtual del proyecto (no se versiona)
+├── examples/            # Ejemplos adicionales o pruebas del sistema
+├── images/              # Imágenes de entrada para el OCR
+├── results/             # Archivos generados con los resultados del OCR
 │
-├── .gitignore
-└── README.md
+├── src/
+│   ├── inferencia.py    # Script principal para ejecutar el sistema
+│   ├── ocr_pipeline.py  # Implementación del pipeline OCR
+│   └── utils.py         # Funciones auxiliares y preprocesamiento
+│
+├── .gitignore           # Archivos y carpetas excluidos del control de versiones
+├── README.md            # Documentación del proyecto
+└── requirements.txt     # Lista de dependencias del proyecto
+
 
 # Descripción de archivos principales
 
-1. utils.py contiene el inicio de la mejora que queremos hacer.
+1. .venv/: entorno virtual local donde se instalan las dependencias del proyecto. No debe subirse al repositorio.
 
-2. ocr_pipeline.py: ejecuta el flujo completo del sistema OCR.
+2. examples/: carpeta destinada a pruebas o ejemplos adicionales del sistema.
 
-3. inferencia.py: script principal que permite ejecutar el sistema y generar resultados (texto y la probabilidad)
+3. images/: contiene las imágenes utilizadas como entrada para el proceso OCR.
+
+4. results/: almacena los archivos de salida generados por el sistema (por ejemplo, output.txt).
+
+5. src/: contiene el código fuente del proyecto.
+
+6. utils.py: funciones de preprocesamiento de imágenes.
+
+7. ocr_pipeline.py: implementación del flujo principal del OCR.
+
+8. inferencia.py: punto de entrada para ejecutar el sistema completo.
+
+9. requirements.txt: archivo que permite instalar todas las dependencias del proyecto mediante pip install -r requirements.txt.
 
 # 5. Instrucciones de uso del script de inferencia
 
@@ -100,7 +119,7 @@ results/output.txt
 
 Archivo:
 
-examples/inputs/a01-000u.png
+(C:\Users\CO1112491564\OCR\examples\inputs\j04-080.png)
 
 Contenido visual aproximado de la imagen:
 
@@ -109,6 +128,7 @@ Contenido visual aproximado de la imagen:
 During the first few hours the curve will be distorted if activity other than bismuth-210 is present. These bismuth niclides may include: together with their lead parents. All but lead-212 will decay completely within six hours. The decay of lead-212 will distort the pbserved activity for four and a half days if it is present."
 
 # Ejemplo de salida (results/output.txt)
+
 Texto reconocido: Sentence Database J04-080 During the first few hours the curve will be distorted if activity other than bismuth- 210 is present. These bismuth nuclides may include: together with their lead parents_ All but lead-212 will decay completely within six hours. The decay of lead-212 will distort the observed activity for four and a half if it is present.
 
 # 7. Limitaciones y posibles mejoras
