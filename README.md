@@ -71,7 +71,7 @@ OCR/
 ├── .gitignore           # Archivos y carpetas excluidos del control de versiones
 ├── README.md            # Documentación del proyecto
 └── requirements.txt     # Lista de dependencias del proyecto
-
+```
 
 # Descripción de archivos principales
 
@@ -128,9 +128,9 @@ Contenido visual aproximado de la imagen:
 During the first few hours the curve will be distorted if activity other than bismuth-210 is present. These bismuth niclides may include: together with their lead parents. All but lead-212 will decay completely within six hours. The decay of lead-212 will distort the pbserved activity for four and a half days if it is present."
 
 # Ejemplo de salida (results/output.txt)
-
+```text
 Texto reconocido: Sentence Database J04-080 During the first few hours the curve will be distorted if activity other than bismuth- 210 is present. These bismuth nuclides may include: together with their lead parents_ All but lead-212 will decay completely within six hours. The decay of lead-212 will distort the observed activity for four and a half if it is present.
-
+```
 # 7. Limitaciones y posibles mejoras
 # Limitaciones actuales
 
