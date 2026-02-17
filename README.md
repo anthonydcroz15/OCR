@@ -59,7 +59,7 @@ OCR/
 ├── images/              # Imágenes de entrada para OCR
 ├── results/             # Resultados generados por el sistema
 ├── src/
-│   ├── utils.py         # Funciones auxiliares y preprocesamiento
+│   ├── utils.py         # Funciones auxiliares
 │   ├── ocr_pipeline.py  # Implementación del pipeline OCR
 │   └── inferencia.py    # Script principal de ejecución
 │
@@ -100,20 +100,16 @@ results/output.txt
 
 Archivo:
 
-images/test_image.png
-
+examples/inputs/a01-000u.png
 
 Contenido visual aproximado de la imagen:
 
-Hola mundo
-Este es un ejemplo OCR
+"Sentence a Database
+
+During the first few hours the curve will be distorted if activity other than bismuth-210 is present. These bismuth niclides may include: together with their lead parents. All but lead-212 will decay completely within six hours. The decay of lead-212 will distort the pbserved activity for four and a half days if it is present."
 
 # Ejemplo de salida (results/output.txt)
-Hola mundo
-Este es un ejemplo OCR
-
-
-El texto también se muestra en la terminal tras ejecutar el script.
+Texto reconocido: Sentence Database J04-080 During the first few hours the curve will be distorted if activity other than bismuth- 210 is present. These bismuth nuclides may include: together with their lead parents_ All but lead-212 will decay completely within six hours. The decay of lead-212 will distort the observed activity for four and a half if it is present.
 
 # 7. Limitaciones y posibles mejoras
 # Limitaciones actuales
