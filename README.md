@@ -119,7 +119,7 @@ results/output.txt
 
 Archivo:
 
-(C:\Users\CO1112491564\OCR\examples\inputs\j04-080.png)
+(examples/inputs/j04-080.png)
 
 Contenido visual aproximado de la imagen:
 
