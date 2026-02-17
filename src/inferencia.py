@@ -1,30 +1,52 @@
-import os
-from src.ocr_pipeline import run_ocr
+import ocr_pipeline as ocr
+import argparse
 
-def main():
-    # Ruta de la imagen de prueba
-    image_path = "images/test_image.png"
+# Configuración de argumentos de entrada para la inferencia OCR
+def build_argparser() -> argparse.ArgumentParser:
+    p = argparse.ArgumentParser(
+        description="OCR inference con EasyOCR. Genera .txt y .json."
+    )
+    p.add_argument(
+        
+        "image_path",
+        type=str,
+        help="Ruta a la imagen (ej: ../examples/inputs/n06-092.png)",
+    )
+    p.add_argument(
+        "--image_name",
+        type=str,
+        default=None,
+        help = "Nombre de la imagen dentro del directorio. Si no se especifica, se asume que image_path es la ruta completa a la imagen."
+    )
+    p.add_argument(
+        "--lang",
+        type=str,
+        default="en",
+        help="Idioma de OCR (default: en). Ej: en, es, pt...",
+    )
+    p.add_argument(
+        "--out",
+        type=str,
+        default=None,
+        help=(
+            "Directorio de salida. Si no se especifica, se usa la carpeta de inferencia.py."
+        ),
+    )
+    return p
 
-    if not os.path.exists(image_path):
-        print("⚠ No se encontró la imagen en la carpeta images.")
-        return
+# 
+def main() -> int:
+    args = build_argparser().parse_args()
 
-    # Ejecutar OCR
-    text = run_ocr(image_path)
 
-    # Crear carpeta results si no existe
-    os.makedirs("results", exist_ok=True)
+    job = ocr.OCRJob(
+        image_path=args.image_path,
+        image_name=args.image_name,
+        output_path=args.out,
+        language=args.lang,
+    )
 
-    # Guardar resultado en archivo
-    output_path = "results/output.txt"
-    with open(output_path, "w", encoding="utf-8") as f:
-        f.write(text)
+    job.excetute()
+    return 0
 
-    print("✅ Texto extraído correctamente.")
-    print("\n--- TEXTO DETECTADO ---\n")
-    print(text)
-    print(f"\n📁 Resultado guardado en: {output_path}")
-
-if __name__ == "__main__":
-    main()
-
+main()
