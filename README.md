@@ -121,6 +121,8 @@ Archivo:
 
 (examples/inputs/j04-080.png)
 
+![Ejemplo de entrada OCR](examples/inputs/j04-080.png)
+
 Contenido visual aproximado de la imagen:
 
 "Sentence a Database
