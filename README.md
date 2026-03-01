@@ -9,10 +9,9 @@ Este proyecto implementa un sistema de Reconocimiento Óptico de Caracteres (OCR
 ```text
 OCR/
 │
-├── .venv/               # Entorno virtual del proyecto (no se versiona)
 ├── examples/            # Ejemplos adicionales o pruebas del sistema
-├── images/              # Imágenes de entrada para el OCR
-├── results/             # Archivos generados con los resultados del OCR
+│   ├── inputs/          # Imágenes de entrada para el OCR para pruebas
+│   ├── outputs/         # Archivos generados con los resultados del OCR para pruebas
 │
 ├── src/
 │   ├── inferencia.py    # Script principal para ejecutar el sistema
@@ -141,23 +140,15 @@ Texto reconocido: Sentence Database J04-080 During the first few hours the curve
 
 # Descripción de archivos principales
 
-1. .venv/: entorno virtual local donde se instalan las dependencias del proyecto. No debe subirse al repositorio.
 
-2. examples/: carpeta destinada a pruebas o ejemplos adicionales del sistema.
+1. examples/: carpeta destinada a pruebas o ejemplos adicionales del sistema.
 
-3. images/: contiene las imágenes utilizadas como entrada para el proceso OCR.
+2. src/: contiene el código fuente del proyecto.
 
-4. results/: almacena los archivos de salida generados por el sistema (por ejemplo, output.txt).
+* ocr_pipeline.py: implementación del flujo principal del OCR.
 
-5. src/: contiene el código fuente del proyecto.
+* inferencia.py: punto de entrada para ejecutar el sistema completo.
 
-6. utils.py: funciones de preprocesamiento de imágenes.
-
-7. ocr_pipeline.py: implementación del flujo principal del OCR.
-
-8. inferencia.py: punto de entrada para ejecutar el sistema completo.
-
-9. requirements.txt: archivo que permite instalar todas las dependencias del proyecto mediante pip install -r requirements.txt.
 
 # Limitaciones y posibles mejoras
 
