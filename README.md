@@ -129,7 +129,7 @@ During the first few hours the curve will be distorted if activity other than bi
 Este ejemplo se hace usando la consolda desde el directorio `OCR/`
 
 ```
-python src/inferencia.py .\examples\inputs\a01-003.png --out .\examples\outputs  
+python src/inferencia.py --image_path .\examples\inputs\j04-080.png --out .\examples\outputs  
 ```
 Se definen claramente las rutas de entrada y salida para la ejecución de la tarea.
 

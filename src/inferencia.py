@@ -3,13 +3,18 @@ import argparse
 
 # Configuración de argumentos de entrada para la inferencia OCR
 def build_argparser() -> argparse.ArgumentParser:
+    '''
+       Funcion para lecuta de argumentos desde consola.
+    '''
+
     p = argparse.ArgumentParser(
         description="OCR inference con EasyOCR. Genera .txt y .json."
     )
     p.add_argument(
         
-        "image_path",
+        "--image_path",
         type=str,
+        default=None,
         help="Ruta a la imagen (ej: ../examples/inputs/n06-092.png)",
     )
     p.add_argument(
@@ -34,8 +39,13 @@ def build_argparser() -> argparse.ArgumentParser:
     )
     return p
 
-# 
+#  Main
 def main() -> int:
+    '''
+    
+        Inferncia usa un agregador de argumentos y los usa para crear un objeto de tipo OCRJob.
+        Una vez definidos los parámetros de la tarea, se ejecuta
+    '''
     args = build_argparser().parse_args()
 
 
