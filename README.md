@@ -87,8 +87,7 @@ pip install easyocr=1.7.2
 2. Especificar argumentos para usar script de inferencia. Ejemplo de lectura desde path relativo
 
 ```
-python src/inferencia.py .\exam
-ples\inputs\a01-003.png
+python src/inferencia.py .\examples\inputs\a01-003.png
 ```
 
 3. Revisar resultados. En este ejemplo, al no especificar la ruta, los archivos se encontraran en el directorio desde el que se ejecutó la inferencia.
@@ -130,8 +129,7 @@ During the first few hours the curve will be distorted if activity other than bi
 Este ejemplo se hace usando la consolda desde el directorio `OCR/`
 
 ```
-python src/inferencia.py .\exam
-ples\inputs\a01-003.png --out .\examples\outputs  
+python src/inferencia.py .\examples\inputs\a01-003.png --out .\examples\outputs  
 ```
 Se definen claramente las rutas de entrada y salida para la ejecución de la tarea.
 
